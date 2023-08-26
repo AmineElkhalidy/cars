@@ -1,3 +1,5 @@
+import { manufacturers } from "./../constants/index";
+import { FilterProps } from "@types";
 import { MouseEventHandler } from "react";
 
 export interface CustomButtonProps {
@@ -28,4 +30,12 @@ export interface CarProps {
   model: string;
   transmission: string;
   year: number;
+}
+
+export interface FilterProps {
+  manufacturar: string;
+  year: number;
+  fuel: string;
+  limit: number;
+  model: string;
 }
