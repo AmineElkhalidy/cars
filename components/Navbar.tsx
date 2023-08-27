@@ -18,7 +18,7 @@ const Navbar = () => {
             className="object-contain"
           /> */}
           <span className="font-bold text-xl tracking-wider dark:text-white">
-            GTCars
+            Cars
           </span>
         </Link>
 
