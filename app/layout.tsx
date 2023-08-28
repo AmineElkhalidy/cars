@@ -13,9 +13,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className="dark" lang="en">
+    <html className="dark scroll-smooth" lang="en">
       <head>
-        <link rel="shortcut icon" href="/racing.png" type="image/png" />
+        <link rel="shortcut icon" href="./racing.png" type="image/png" />
       </head>
 
       <body className="dark:bg-black">

@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 import { footerLinks } from "@/constants";
@@ -25,7 +24,7 @@ const Footer = () => {
             className="object-contain"
           /> */}
             <span className="font-bold text-xl tracking-wider dark:text-white">
-              GTCars
+              Cars
             </span>
           </Link>
 
@@ -42,7 +41,7 @@ const Footer = () => {
                 <Link
                   key={item.title}
                   href={item.url}
-                  className="text-gray-500 dark:text-gray-200"
+                  className="text-gray-500 dark:text-gray-200 duration-300 hover:font-semibold"
                 >
                   {item.title}
                 </Link>
@@ -57,11 +56,17 @@ const Footer = () => {
           @2023 Cars. All Rights Reserved
         </p>
         <div className="footer__copyrights-link">
-          <Link href="/" className="text-gray-500 dark:text-gray-200">
+          <Link
+            href="/"
+            className="text-gray-500 dark:text-gray-200 duration-300 hover:font-semibold"
+          >
             Privacy Policy
           </Link>
 
-          <Link href="/" className="text-gray-500 dark:text-gray-200">
+          <Link
+            href="/"
+            className="text-gray-500 dark:text-gray-200 duration-300 hover:font-semibold"
+          >
             Terms of Use
           </Link>
         </div>
