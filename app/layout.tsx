@@ -3,7 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "GTCars - Cars exhibition",
+  title: "Cars - cars exhibition",
   description: "Discover the best car in the entire world!",
 };
 
@@ -14,6 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html className="dark" lang="en">
+      <head>
+        <link rel="shortcut icon" href="/racing.png" type="image/png" />
+      </head>
+
       <body className="dark:bg-black">
         <Navbar />
         {children}
