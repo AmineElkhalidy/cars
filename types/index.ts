@@ -1,3 +1,4 @@
+import { CustomFilter } from "@/components";
 import { manufacturers } from "./../constants/index";
 import { FilterProps } from "@types";
 import { MouseEventHandler } from "react";
@@ -38,4 +39,19 @@ export interface FilterProps {
   fuel: string;
   limit: number;
   model: string;
+}
+
+export interface OptionProps {
+  title: string;
+  value: string;
+}
+
+export interface CustomFilterProps {
+  title: string;
+  options: OptionProps[];
+}
+
+export interface ShowMoreProps {
+  pageNumber: number;
+  isNext: boolean;
 }
