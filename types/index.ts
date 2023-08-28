@@ -1,5 +1,3 @@
-import { CustomFilter } from "@/components";
-import { manufacturers } from "./../constants/index";
 import { FilterProps } from "@types";
 import { MouseEventHandler } from "react";
 
