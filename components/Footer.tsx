@@ -41,7 +41,7 @@ const Footer = () => {
                 <Link
                   key={item.title}
                   href={item.url}
-                  className="text-gray-500 dark:text-gray-200 duration-300 hover:font-semibold"
+                  className="text-gray-500 dark:text-gray-200"
                 >
                   {item.title}
                 </Link>
@@ -56,17 +56,11 @@ const Footer = () => {
           @2023 Cars. All Rights Reserved
         </p>
         <div className="footer__copyrights-link">
-          <Link
-            href="/"
-            className="text-gray-500 dark:text-gray-200 duration-300 hover:font-semibold"
-          >
+          <Link href="/" className="text-gray-500 dark:text-gray-200">
             Privacy Policy
           </Link>
 
-          <Link
-            href="/"
-            className="text-gray-500 dark:text-gray-200 duration-300 hover:font-semibold"
-          >
+          <Link href="/" className="text-gray-500 dark:text-gray-200">
             Terms of Use
           </Link>
         </div>

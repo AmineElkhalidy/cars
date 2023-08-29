@@ -14,10 +14,6 @@ export default function RootLayout({
 }) {
   return (
     <html className="dark scroll-smooth" lang="en">
-      <head>
-        <link rel="shortcut icon" href="./racing.png" type="image/png" />
-      </head>
-
       <body className="dark:bg-black">
         <Navbar />
         {children}
