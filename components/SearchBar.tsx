@@ -19,49 +19,27 @@ const SearchButton = ({ otherClasses }: { otherClasses: string }) => {
   );
 };
 
-const SearchBar = () => {
-  const [manufacturar, setManufacturar] = useState("");
-  const [modal, setModal] = useState("");
-  const router = useRouter();
+const SearchBar = ({ setManufacturar, setModel }) => {
+  const [searchManufacturar, setSearchManufacturar] = useState("");
+  const [searchModal, setSearchModal] = useState("");
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (manufacturar === "" && modal === "") {
+    if (searchManufacturar === "" && searchModal === "") {
       return alert("Please fill in the search bar");
     }
 
-    updateSearchParams(modal.toLowerCase(), manufacturar.toLowerCase());
-  };
-
-  const updateSearchParams = (model: string, manufacturar: string) => {
-    const searchParams = new URLSearchParams(window.location.search);
-
-    if (model) {
-      searchParams.set("model", model);
-    } else {
-      searchParams.delete("model");
-    }
-
-    if (manufacturar) {
-      searchParams.set("manufacturar", manufacturar);
-    } else {
-      searchParams.delete("manufacturar");
-    }
-
-    const newPathname = `${
-      window.location.pathname
-    }?${searchParams.toString()}`;
-
-    router.push(newPathname);
+    setModel(searchModal.toLowerCase());
+    setManufacturar(searchManufacturar.toLowerCase());
   };
 
   return (
     <form className="searchbar" onSubmit={handleSearch}>
       <div className="searchbar__item">
         <SearchManufacturar
-          manufacturar={manufacturar}
-          setManufacturar={setManufacturar}
+          selected={searchManufacturar}
+          setSelected={setSearchManufacturar}
         />
         <SearchButton otherClasses={"sm:hidden"} />
       </div>
@@ -78,8 +56,8 @@ const SearchBar = () => {
         <input
           type="text"
           name="modal"
-          value={modal}
-          onChange={(e) => setModal(e.target.value)}
+          value={searchModal}
+          onChange={(e) => setSearchModal(e.target.value)}
           placeholder="Tiguan"
           className="searchbar__input"
         />
