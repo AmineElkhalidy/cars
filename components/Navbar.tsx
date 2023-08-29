@@ -1,10 +1,7 @@
 import React from "react";
 import Link from "next/link";
-// import Image from "next/image";
 
 import { CustomButton } from ".";
-import Switcher from "./Switcher";
-
 const Navbar = () => {
   return (
     <header className="w-full absolute z-10">
@@ -22,13 +19,12 @@ const Navbar = () => {
           </span>
         </Link>
 
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-5 mr-2">
           <CustomButton
             title="Sign In"
             btnType="button"
             containerStyles="text-primary-blue rounded-full bg-white min-w-[130px] shadow-md"
           />
-          <Switcher />
         </div>
       </nav>
     </header>

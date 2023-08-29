@@ -1,6 +1,7 @@
-import { Footer, Navbar } from "@/components";
+import { Footer, Navbar, Switcher } from "@/components";
 import "./globals.css";
 import type { Metadata } from "next";
+import { ThemeProvider } from "./theme-provider";
 
 export const metadata: Metadata = {
   title: "Cars - cars exhibition",
@@ -15,9 +16,14 @@ export default function RootLayout({
   return (
     <html className="dark scroll-smooth" lang="en">
       <body className="dark:bg-black">
-        <Navbar />
-        {children}
-        <Footer />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="relative">
+            <Navbar />
+            <Switcher />
+          </div>
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
